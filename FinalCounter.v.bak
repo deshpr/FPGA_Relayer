@@ -1,0 +1,6 @@
+module MyAnotherCount (CLOCK_50,AUX_INPUT, DEBUG_OUTPUT, 
+			LED_OUTPUT, ON_MODE, START, SysClock_Enabler, Clear);	
+			
+
+			
+endmodule

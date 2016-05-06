@@ -1,0 +1,12 @@
+module UART_Switch(
+		RPI_Tx,
+		RPI_Rx,
+		Xbee_Tx,
+		Xbee_Rx,
+		GPS_Tx,
+		GPS_Rx
+				);
+				
+				
+
+endmodule

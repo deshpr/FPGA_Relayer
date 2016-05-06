@@ -1,0 +1,52 @@
+module MyCounter (CLOCK_50,AUX_INPUT,  LED_OUTPUT);	
+		input [0:0] CLOCK_50;
+		wire [25:0] CountValue;
+		reg [0:0] Enabler;
+		input [0:0] AUX_INPUT;
+		reg Clear;
+		
+		output reg [3:0] LED_OUTPUT;		
+		
+//		MyFrequencyDivider my_Divider (CLOCK_50, Enabler);
+//		ClockCycleCounter  myClockCycleCounter (CLOCK_50, CycleCount);
+		
+initial
+	begin
+		Clear = 0;
+		Enabler = 0;
+	end	
+	always @(AUX_INPUT)	// When AUX_INPUT changes. 
+	begin
+	if(AUX_INPUT)	// Rising edge.
+	begin
+		Enabler = 1;
+		LED_OUTPUT[1] = 1;
+		LED_OUTPUT[2]   = 0;
+	end
+	else				// Falling edge.
+		begin
+			Enabler = 0;	
+			LED_OUTPUT[1] = 0;
+			LED_OUTPUT[2] = 1;
+		end
+	end	
+	
+	always @(posedge CLOCK_50)
+	begin
+		if(CountValue== 26'd948888)	// If cycle count is 950,000
+		 begin
+			LED_OUTPUT[0] = 1;
+			Clear = 1;
+		end
+		else
+		 begin
+    	//   LED_OUTPUT[0]= 0;
+		   //Clear = 0;
+		end
+	end
+//		Altera_Counter altera_counter (Enabler, CLOCK_50, 0, CountValue);
+	PWMCounter altera_counter ( Enabler,CLOCK_50, Clear, CountValue);
+//	assign LED_OUTPUT[1] = CountValue[1];
+//	assign LED_OUTPUT[2] = CountValue[2];
+	//	BCD7seg (CountValue, HEX0);
+endmodule

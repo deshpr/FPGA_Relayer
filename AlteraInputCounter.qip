@@ -1,0 +1,8 @@
+set_global_assignment -name IP_TOOL_NAME "LPM_COUNTER"
+set_global_assignment -name IP_TOOL_VERSION "13.0"
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "AlteraInputCounter.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "AlteraInputCounter.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "AlteraInputCounter_inst.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "AlteraInputCounter_bb.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "AlteraInputCounter.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "AlteraInputCounter.cmp"]
