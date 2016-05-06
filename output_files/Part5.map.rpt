@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Part5
-Fri May 06 14:05:29 2016
+Fri May 06 14:45:16 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 06 14:05:29 2016           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 06 14:45:16 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Part5                                           ;
 ; Top-level Entity Name              ; Part5                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 245                                             ;
-;     Total combinational functions  ; 245                                             ;
-;     Dedicated logic registers      ; 78                                              ;
-; Total registers                    ; 78                                              ;
-; Total pins                         ; 50                                              ;
+; Total logic elements               ; 235                                             ;
+;     Total combinational functions  ; 235                                             ;
+;     Dedicated logic registers      ; 74                                              ;
+; Total registers                    ; 74                                              ;
+; Total pins                         ; 37                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -175,28 +175,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 245               ;
+; Estimated Total logic elements              ; 235               ;
 ;                                             ;                   ;
-; Total combinational functions               ; 245               ;
+; Total combinational functions               ; 235               ;
 ; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 165               ;
-;     -- 3 input functions                    ; 71                ;
-;     -- <=2 input functions                  ; 9                 ;
+;     -- 4 input functions                    ; 159               ;
+;     -- 3 input functions                    ; 69                ;
+;     -- <=2 input functions                  ; 7                 ;
 ;                                             ;                   ;
 ; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 195               ;
+;     -- normal mode                          ; 185               ;
 ;     -- arithmetic mode                      ; 50                ;
 ;                                             ;                   ;
-; Total registers                             ; 78                ;
-;     -- Dedicated logic registers            ; 78                ;
+; Total registers                             ; 74                ;
+;     -- Dedicated logic registers            ; 74                ;
 ;     -- I/O registers                        ; 0                 ;
 ;                                             ;                   ;
-; I/O pins                                    ; 50                ;
+; I/O pins                                    ; 37                ;
 ; Embedded Multiplier 9-bit elements          ; 0                 ;
 ; Maximum fan-out node                        ; CLOCK_50[0]~input ;
-; Maximum fan-out                             ; 78                ;
-; Total fan-out                               ; 1127              ;
-; Average fan-out                             ; 2.66              ;
+; Maximum fan-out                             ; 74                ;
+; Total fan-out                               ; 1064              ;
+; Average fan-out                             ; 2.78              ;
 +---------------------------------------------+-------------------+
 
 
@@ -205,9 +205,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
-; |Part5                                                 ; 245 (8)           ; 78 (2)       ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |Part5                                                   ; work         ;
-;    |SignalDetector:signal_detector_autonomous_control| ; 117 (117)         ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_autonomous_control ; work         ;
-;    |SignalDetector:signal_detector_cruise_control|     ; 120 (120)         ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_cruise_control     ; work         ;
+; |Part5                                                 ; 235 (8)           ; 74 (2)       ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |Part5                                                   ; work         ;
+;    |SignalDetector:signal_detector_autonomous_control| ; 112 (112)         ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_autonomous_control ; work         ;
+;    |SignalDetector:signal_detector_cruise_control|     ; 115 (115)         ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_cruise_control     ; work         ;
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -217,7 +217,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
+; Total registers                              ; 74    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -232,10 +232,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------+---------+
 ; Inverted Register                                                   ; Fan out ;
 +---------------------------------------------------------------------+---------+
-; SignalDetector:signal_detector_autonomous_control|times_to_check[0] ; 5       ;
 ; SignalDetector:signal_detector_autonomous_control|times_to_check[2] ; 3       ;
-; SignalDetector:signal_detector_cruise_control|times_to_check[0]     ; 5       ;
+; SignalDetector:signal_detector_autonomous_control|times_to_check[0] ; 5       ;
 ; SignalDetector:signal_detector_cruise_control|times_to_check[2]     ; 3       ;
+; SignalDetector:signal_detector_cruise_control|times_to_check[0]     ; 5       ;
 ; Total number of inverted registers = 4                              ;         ;
 +---------------------------------------------------------------------+---------+
 
@@ -245,27 +245,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_autonomous_control|count[7]          ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_autonomous_control|count[9]          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_autonomous_control|times_to_check[1] ;
-; 3:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_cruise_control|count[11]             ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_cruise_control|count[25]             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_cruise_control|times_to_check[1]     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_autonomous_control|times_to_check[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_autonomous_control|times_to_check[2] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Part5|SignalDetector:signal_detector_cruise_control|times_to_check[0]     ;
 ; 4:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; No         ; |Part5|SignalDetector:signal_detector_autonomous_control|count             ;
 ; 4:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; No         ; |Part5|SignalDetector:signal_detector_cruise_control|count                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UART_Switch:switch_Xbee_Gps"                                                                                                                                                        ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; S       ; Input  ; Warning  ; Input port expression (3 bits) is wider than the input port (1 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; RPI_Rx  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-; Xbee_Rx ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-; GPS_Rx  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Switch:switch_Xbee_Gps"                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; RPI_Rx  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Xbee_Rx ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GPS_Rx  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -283,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 06 14:05:22 2016
+    Info: Processing started: Fri May 06 14:45:09 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part5 -c Part5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /330 projects/lab1/part6/myfrequencydivider/myfrequencydivider.v
@@ -330,47 +329,30 @@ Warning (10090): Verilog HDL syntax warning at FinishedCompleteCounter.v(354): e
 Warning (10090): Verilog HDL syntax warning at FinishedCompleteCounter.v(359): extra block comment delimiter characters /* within block comment
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/finishedcompletecounter.v
     Info (12023): Found entity 1: FinishedCompleteCounter
-Warning (10090): Verilog HDL syntax warning at SignalDetector.v(223): extra block comment delimiter characters /* within block comment
-Warning (10090): Verilog HDL syntax warning at SignalDetector.v(238): extra block comment delimiter characters /* within block comment
-Warning (10090): Verilog HDL syntax warning at SignalDetector.v(259): extra block comment delimiter characters /* within block comment
-Warning (10090): Verilog HDL syntax warning at SignalDetector.v(272): extra block comment delimiter characters /* within block comment
-Warning (10090): Verilog HDL syntax warning at SignalDetector.v(351): extra block comment delimiter characters /* within block comment
-Warning (10090): Verilog HDL syntax warning at SignalDetector.v(356): extra block comment delimiter characters /* within block comment
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/signaldetector.v
     Info (12023): Found entity 1: SignalDetector
 Info (12021): Found 1 design units, including 1 entities, in source file uart_switch.v
     Info (12023): Found entity 1: UART_Switch
-Warning (10236): Verilog HDL Implicit Net warning at Part5.v(123): created implicit net for "Clock_Pulse"
+Warning (10236): Verilog HDL Implicit Net warning at Part5.v(100): created implicit net for "Clock_Pulse"
+Warning (10236): Verilog HDL Implicit Net warning at Part5.v(102): created implicit net for "SD_Rudder_Output"
+Warning (10236): Verilog HDL Implicit Net warning at Part5.v(103): created implicit net for "Rx_Rudder_Output"
 Info (12127): Elaborating entity "Part5" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Part5.v(123): object "Clock_Pulse" assigned a value but never read
-Warning (10034): Output port "LED[6]" at Part5.v(82) has no driver
+Warning (10036): Verilog HDL or VHDL warning at Part5.v(100): object "Clock_Pulse" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Part5.v(102): object "SD_Rudder_Output" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Part5.v(103): object "Rx_Rudder_Output" assigned a value but never read
+Warning (10034): Output port "LED[6]" at Part5.v(63) has no driver
 Info (12128): Elaborating entity "SignalDetector" for hierarchy "SignalDetector:signal_detector_autonomous_control"
 Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(8): object "Enabler" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(20): object "mode_to_operate" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(21): object "checker_count" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(22): object "start_checker_count" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(24): object "count_one" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(25): object "count_two" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(27): object "trials" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(28): object "count_so_far" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(34): object "input_is_off" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at SignalDetector.v(24): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at SignalDetector.v(25): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at SignalDetector.v(27): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at SignalDetector.v(98): truncated value with size 32 to match size of target (5)
+Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(15): object "mode_to_operate" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(18): object "count_so_far" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(24): object "input_is_off" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at SignalDetector.v(66): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at SignalDetector.v(76): truncated value with size 32 to match size of target (26)
 Warning (10230): Verilog HDL assignment warning at SignalDetector.v(108): truncated value with size 32 to match size of target (26)
-Warning (10230): Verilog HDL assignment warning at SignalDetector.v(142): truncated value with size 32 to match size of target (26)
-Warning (10230): Verilog HDL assignment warning at SignalDetector.v(156): truncated value with size 32 to match size of target (4)
-Warning (10034): Output port "DEBUG_OUTPUT4[0]" at SignalDetector.v(16) has no driver
+Warning (10230): Verilog HDL assignment warning at SignalDetector.v(121): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "UART_Switch" for hierarchy "UART_Switch:switch_Xbee_Gps"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[6]" is stuck at GND
-    Warning (13410): Pin "DEBUG_OUTPUT3[0]" is stuck at GND
-    Warning (13410): Pin "DEBUG_OUTPUT4[0]" is stuck at GND
-    Warning (13410): Pin "DEBUG_OUTPUT_A3[0]" is stuck at GND
-    Warning (13410): Pin "DEBUG_OUTPUT_A4[0]" is stuck at GND
-    Warning (13410): Pin "OUTPUT_SHOW" is stuck at VCC
     Warning (13410): Pin "RPI_Rx" is stuck at GND
     Warning (13410): Pin "Xbee_Rx" is stuck at GND
     Warning (13410): Pin "GPS_Rx" is stuck at GND
@@ -385,13 +367,13 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "RPI_Tx"
     Warning (15610): No output dependent on input pin "Xbee_Tx"
     Warning (15610): No output dependent on input pin "GPS_Tx"
-Info (21057): Implemented 295 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 272 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 245 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 235 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
     Info: Peak virtual memory: 471 megabytes
-    Info: Processing ended: Fri May 06 14:05:29 2016
+    Info: Processing ended: Fri May 06 14:45:16 2016
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 

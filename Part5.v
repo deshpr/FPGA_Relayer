@@ -3,33 +3,26 @@ module Part5 (CLOCK_50,
 					LED, 
 					AUTONOMOUS, 
 					CRUISE_CONTROL,
-					DEBUG_OUTPUT, AUX_OUTPUT, AUX_OUTPUT_TWO,
-					DEBUG_OUTPUT2, DEBUG_OUTPUT3,
-					DEBUG_OUTPUT4,
-					DEBUG_OUTPUT_A,  DEBUG_OUTPUT_A2, DEBUG_OUTPUT_A3, DEBUG_OUTPUT_A4,
-					SD_Rudder, 
-					SD_Elevator,
+					SD_Rudder,  
+					SD_Elevator, 
 					SD_Aileron,
-					SD_Throttle,
-					SD_Pan, 
-					SD_Tilt,
-					Rx_Rudder,
-					Rx_Elevator,
-					Rx_Aileron,
-					Rx_Throttle,
-					Rudder,
-					Elevator,
-					Aileron,
-					Throttle,
-					Pan,
-					Tilt,
-					 SD_Rudder_Output,
-					 Rx_Rudder_Output,
+					SD_Throttle, 
+					SD_Pan,  
+					SD_Tilt, 
+					Rx_Rudder, 
+					Rx_Elevator, 
+					Rx_Aileron, 
+					Rx_Throttle, 
+					Rudder, 
+					Elevator, 
+					Aileron, 
+					Throttle, 
+					Pan, 
+					Tilt, 
 					 RPI_Req_CRUISE,
 					 RPI_Ack_CRUISE,
 					 RPI_Req_AUTONOMOUS,
 					 RPI_Ack_AUTONOMOUS,
-					 OUTPUT_SHOW,
 					 SELECT, 
 					 RPI_Rx,
 					 RPI_Tx,
@@ -39,60 +32,53 @@ module Part5 (CLOCK_50,
 					 GPS_Tx		 
 				);
 				
-	input SD_Rudder, 
-			SD_Elevator,
-			SD_Aileron,
-			SD_Throttle,
-			SD_Pan, 
-			SD_Tilt,
-			Rx_Rudder,
-			Rx_Elevator,
-			Rx_Aileron,
-			Rx_Throttle,
+	input SD_Rudder, // Servo Driver Rudder
+			SD_Elevator, // Servo Driver Eelevator
+			SD_Aileron,  // Servo Driver Aileron
+			SD_Throttle, // Servo Driver Throttle
+			SD_Pan, // Servo Driver Pan
+			SD_Tilt, // Servo Driver Tilt
+			Rx_Rudder, // Receiver Rudder
+			Rx_Elevator, // Receiver Elevator
+			Rx_Aileron, // Receiver Aileron
+			Rx_Throttle, // Receover Throttle
 			RPI_Ack_CRUISE,
 			RPI_Ack_AUTONOMOUS;
 			
-	output Rudder,
-			Elevator,
-			Aileron,
-			Throttle,
-			Pan,
-			Tilt,
-			RPI_Req_CRUISE,
-			RPI_Req_AUTONOMOUS,
-			OUTPUT_SHOW;
+	output Rudder, //  Rudder Output
+			Elevator, // Elevator Output
+			Aileron, // Aileron Output
+			Throttle, //  Throttle Output
+			Pan, // Pan Output
+			Tilt, // Tilt Output
+			RPI_Req_CRUISE, // Request for Cruise Control to Raspberry PI
+			RPI_Req_AUTONOMOUS; //  Request for Autonomous Mode  to Raspberry PI
+		
 			
-	// For debugging
-	output SD_Rudder_Output;
-	output Rx_Rudder_Output;
-  
-				
-/*  Define the Inputs */
-	input  [0:0] CLOCK_50;
-	//output [0:0] SIGNAL_CHANGE;
-	input  [0:0] AUTONOMOUS;
-	input [0:0] CRUISE_CONTROL;
-	output [0:0] DEBUG_OUTPUT_A;
-	output [0:0] DEBUG_OUTPUT_A2;
-	output [0:0] DEBUG_OUTPUT_A3;
-	output [0:0] DEBUG_OUTPUT_A4;
-	output [0:0] AUX_OUTPUT;
-	output [0:0] AUX_OUTPUT_TWO;
-	output [0:0] DEBUG_OUTPUT2;
-	output [6:0] LED;
-	output [0:0] DEBUG_OUTPUT;
-	output [0:0] DEBUG_OUTPUT3;
-	output [0:0] DEBUG_OUTPUT4;
-	wire   [2:0] S;
+
+
+	input  [0:0] CLOCK_50; // 50 MHx Clock Signal 
+	input  [0:0] AUTONOMOUS; // Autonomous signal input from receiver
+	input [0:0] CRUISE_CONTROL; // Cruise Control signal input from the receiver
+	output [6:0] LED; // LED's to output current mode (helps with debugging)
+ 
 
 
 	
-	input SELECT, RPI_Tx, Xbee_Tx, GPS_Tx;
-	output RPI_Rx, Xbee_Rx, GPS_Rx;
+	input SELECT, // The Select input for switching between Xbee and GPS for UART communication.
+			RPI_Tx,  // Tx pin from Raspberry PI
+			Xbee_Tx,  // Tx pin from the Xbee
+			GPS_Tx;   // Tx pin from the GPS 
+	output RPI_Rx,	// Rx pin of the Raspberry PI 
+			Xbee_Rx,  // Rx pin of the Xbee
+			GPS_Rx;  // Rx of GPS
 	
-	assign OUTPUT_SHOW = 1;
+
+	// Registers to indicate what the current mode of operation  is.
 	reg CRUISE_CONTROL_MODE;
 	reg AUTONOMOUS_MODE;
+	
+	// Switch modes only when PI has acknowledged such a change.
 	
 	always @(posedge CLOCK_50)
 	begin
@@ -106,30 +92,20 @@ module Part5 (CLOCK_50,
 		end
 	end
 
-	// Notify Raspberry Pi regarding whether a certain mode is ON or OFF.
-	// Set up mode of operation based on Acknowledgement from Raspberry Pi.
-	// Implement XNOR. Only if both are equal is the result true and we set
-	// the appropriate mode. 
-	// Do not use commented logic below..
-//	wire CRUISE_CONTROL_MODE = (RPI_Req_CRUISE ~^ RPI_Ack_CRUISE) & RPI_Req_CRUISE;
-//	wire AUTONOMOUS_MODE = (RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS) & RPI_Req_AUTONOMOUS;
-	
-//	wire CRUISE_CONTROL_MODE = (RPI_Req_CRUISE ~^ RPI_Ack_CRUISE) & RPI_Ack_CRUISE;
-//	wire AUTONOMOUS_MODE = (RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS) & RPI_Ack_AUTONOMOUS;
-	
+	// Display output onto LED's for debugging.
 	assign LED[2] = RPI_Ack_AUTONOMOUS;
 	assign LED[3] = RPI_Ack_CRUISE;
 	assign LED[4] = (RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS);
 	assign LED[5] = (RPI_Req_CRUISE ~^ RPI_Ack_CRUISE);
 	assign Clock_Pulse = CLOCK_50;
-	assign AUX_OUTPUT = AUTONOMOUS;
-	assign AUX_OUTPUT_TWO = CRUISE_CONTROL;
+
 	assign SD_Rudder_Output = AUTONOMOUS;
 	assign Rx_Rudder_Output = CRUISE_CONTROL;
 	
 	//  Try not to make everything sequential, helps
 	//  reduce the delay. 
 	//  Implement logic expressions. 
+	// Logic Expressions derived from truth table.	
 	assign Rudder = (~AUTONOMOUS_MODE & ~CRUISE_CONTROL_MODE & Rx_Rudder) 
 							| (SD_Rudder & (AUTONOMOUS_MODE|CRUISE_CONTROL_MODE));
 							
@@ -146,8 +122,7 @@ module Part5 (CLOCK_50,
 	assign Tilt =  (CRUISE_CONTROL_MODE & Rx_Rudder) | (~CRUISE_CONTROL_MODE & SD_Pan);
 	
 	SignalDetector signal_detector_autonomous_control (CLOCK_50, AUTONOMOUS, 
-			DEBUG_OUTPUT, LED[0], DEBUG_OUTPUT2, DEBUG_OUTPUT3,
-				DEBUG_OUTPUT4);
+			LED[0]);
 				
 		/*	
 	SignalDetector signal_detector_cruise_control (CLOCK_50, CRUISE_CONTROL, 
@@ -157,12 +132,10 @@ module Part5 (CLOCK_50,
 	 */
 		
 	SignalDetector signal_detector_cruise_control (CLOCK_50, CRUISE_CONTROL, 
-			DEBUG_OUTPUT_A, LED[1], DEBUG_OUTPUT_A2,DEBUG_OUTPUT_A3,
-				DEBUG_OUTPUT_A4);		
+		LED[1]);		
 	
 	
-   UART_Switch switch_Xbee_Gps (S, RPI_Tx,RPI_Rx, Xbee_Tx, Xbee_Rx, GPS_Tx, GPS_Rx);
-	
+   UART_Switch switch_Xbee_Gps (SELECT, RPI_Tx,RPI_Rx, Xbee_Tx, Xbee_Rx, GPS_Tx, GPS_Rx);
 	
 	assign RPI_Req_AUTONOMOUS =LED[0];
 	assign RPI_Req_CRUISE = LED[1];

@@ -69,26 +69,26 @@ CHIP  "Part5"  ASSIGNED TO AN: EP4CE22F17C6
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-DEBUG_OUTPUT3[0]             : A2        : output : 2.5 V             :         : 8         : Y              
-AUX_OUTPUT_TWO[0]            : A3        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
 Aileron                      : A6        : output : 2.5 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
 GND+                         : A8        :        :                   :         : 8         :                
 GND+                         : A9        :        :                   :         : 7         :                
-GPS_Rx                       : A10       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
 LED[3]                       : A11       : output : 2.5 V             :         : 7         : Y              
-DEBUG_OUTPUT[0]              : A12       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
 LED[1]                       : A13       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 LED[0]                       : A15       : output : 2.5 V             :         : 7         : Y              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 LED[6]                       : B1        : output : 2.5 V             :         : 1         : Y              
 GND                          : B2        : gnd    :                   :         :           :                
-DEBUG_OUTPUT4[0]             : B3        : output : 2.5 V             :         : 8         : Y              
-AUX_OUTPUT[0]                : B4        : output : 2.5 V             :         : 8         : Y              
-DEBUG_OUTPUT_A3[0]           : B5        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
 GND+                         : B8        :        :                   :         : 8         :                
@@ -107,8 +107,8 @@ VCCIO8                       : C4        : power  :                   : 2.5V    
 GND                          : C5        : gnd    :                   :         :           :                
 Rudder                       : C6        : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-OUTPUT_SHOW                  : C8        : output : 2.5 V             :         : 8         : Y              
-DEBUG_OUTPUT2[0]             : C9        : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 GND                          : C12       : gnd    :                   :         :           :                
@@ -130,7 +130,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
 VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
-RPI_Rx                       : D15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 6         :                
 GND+                         : E1        :        :                   :         : 1         :                
 GND                          : E2        : gnd    :                   :         :           :                
@@ -209,7 +209,7 @@ GND                          : J10       : gnd    :                   :         
 GND                          : J11       : gnd    :                   :         :           :                
 VCCINT                       : J12       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 5         :                
-SD_Rudder_Output             : J14       : output : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 2         :                
@@ -226,9 +226,9 @@ VCCINT                       : K11       : power  :                   : 1.2V    
 GND                          : K12       : gnd    :                   :         :           :                
 GND                          : K13       : gnd    :                   :         :           :                
 VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
-Rx_Rudder_Output             : K15       : output : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K15       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 5         :                
-RPI_Tx                       : L1        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 2         :                
@@ -241,7 +241,7 @@ GND                          : L10       : gnd    :                   :         
 GND                          : L11       : gnd    :                   :         :           :                
 VCCA4                        : L12       : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L13       :        :                   :         : 5         :                
-GPS_Tx                       : L14       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L14       :        :                   :         : 5         :                
 AUTONOMOUS[0]                : L15       : input  : 2.5 V             :         : 5         : Y              
 RPI_Ack_AUTONOMOUS           : L16       : input  : 2.5 V             :         : 5         : Y              
 GND+                         : M1        :        :                   :         : 2         :                
@@ -249,9 +249,9 @@ GND+                         : M2        :        :                   :         
 VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
 GND                          : M4        : gnd    :                   :         :           :                
 GNDA1                        : M5        : gnd    :                   :         :           :                
-Xbee_Tx                      : M6        : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 3         :                
-DEBUG_OUTPUT_A2[0]           : M8        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3         :                
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M10       :        :                   :         : 4         :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
@@ -271,10 +271,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :      
 RPI_Req_AUTONOMOUS           : N9        : output : 2.5 V             :         : 4         : Y              
 GND                          : N10       : gnd    :                   :         :           :                
 Rx_Elevator                  : N11       : input  : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 4         :                
+Xbee_Rx                      : N12       : output : 2.5 V             :         : 4         : Y              
 VCCD_PLL4                    : N13       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 5         :                
-SELECT                       : N15       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
 Rx_Rudder                    : N16       : input  : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 2         :                
@@ -283,10 +283,10 @@ VCCIO3                       : P4        : power  :                   : 2.5V    
 GND                          : P5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P6        :        :                   :         : 3         :                
 VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
-DEBUG_OUTPUT_A[0]            : P8        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3         :                
 Rx_Aileron                   : P9        : input  : 2.5 V             :         : 4         : Y              
 VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
-Xbee_Rx                      : P11       : output : 2.5 V             :         : 4         : N              
+Xbee_Tx                      : P11       : input  : 2.5 V             :         : 4         : Y              
 GND                          : P12       : gnd    :                   :         :           :                
 VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 4         :                
@@ -300,27 +300,27 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
 CLOCK_50[0]                  : R8        : input  : 2.5 V             :         : 3         : Y              
-GND+                         : R9        :        :                   :         : 4         :                
+SELECT                       : R9        : input  : 2.5 V             :         : 4         : N              
 Rx_Throttle                  : R10       : input  : 2.5 V             :         : 4         : Y              
 SD_Tilt                      : R11       : input  : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
+RPI_Tx                       : R12       : input  : 2.5 V             :         : 4         : Y              
+GPS_Rx                       : R13       : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4         :                
 GND                          : R15       : gnd    :                   :         :           :                
 RPI_Req_CRUISE               : R16       : output : 2.5 V             :         : 5         : Y              
 VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 3         :                
-DEBUG_OUTPUT_A4[0]           : T3        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
 GND+                         : T8        :        :                   :         : 3         :                
 GND+                         : T9        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 4         :                
+RPI_Rx                       : T10       : output : 2.5 V             :         : 4         : Y              
 SD_Pan                       : T11       : input  : 2.5 V             :         : 4         : Y              
 SD_Rudder                    : T12       : input  : 2.5 V             :         : 4         : Y              
 SD_Elevator                  : T13       : input  : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4         :                
+GPS_Tx                       : T14       : input  : 2.5 V             :         : 4         : Y              
 SD_Aileron                   : T15       : input  : 2.5 V             :         : 4         : Y              
 VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                
