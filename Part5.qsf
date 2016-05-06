@@ -592,9 +592,7 @@ set_global_assignment -name VERILOG_FILE MyCounter.v
 set_location_assignment PIN_B4 -to AUX_OUTPUT
 set_location_assignment PIN_A12 -to DEBUG_OUTPUT[0]
 set_location_assignment PIN_A7 -to START
-set_location_assignment PIN_D6 -to Clear
 set_instance_assignment -name IO_STANDARD LVDS -to C
-set_location_assignment PIN_C6 -to Clock_Pulse
 set_global_assignment -name VERILOG_FILE MyAnotherCount.v
 set_global_assignment -name VERILOG_FILE FinalCounter.v
 set_global_assignment -name VERILOG_FILE output_files/FinishedCounter.v
@@ -628,8 +626,15 @@ set_location_assignment PIN_F13 -to SD_Throttle
 set_location_assignment PIN_D5 -to Throttle
 set_location_assignment PIN_C8 -to OUTPUT_SHOW
 set_global_assignment -name VERILOG_FILE UART_Switch.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_T15 -to SD_Aileron
 set_location_assignment PIN_T13 -to SD_Elevator
 set_location_assignment PIN_T12 -to SD_Rudder
 set_location_assignment PIN_R11 -to SD_Tilt
+set_location_assignment PIN_P9 -to Rx_Aileron
+set_location_assignment PIN_N11 -to Rx_Elevator
+set_location_assignment PIN_A6 -to Aileron
+set_location_assignment PIN_D6 -to Elevator
+set_location_assignment PIN_C6 -to Rudder
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_E6 -to Pan
+set_location_assignment PIN_D8 -to Tilt

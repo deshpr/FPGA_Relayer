@@ -4,7 +4,7 @@ module Part5 (CLOCK_50,
 					AUTONOMOUS, 
 					CRUISE_CONTROL,
 					DEBUG_OUTPUT, AUX_OUTPUT, AUX_OUTPUT_TWO,
-					Clock_Pulse, DEBUG_OUTPUT2, DEBUG_OUTPUT3,
+					DEBUG_OUTPUT2, DEBUG_OUTPUT3,
 					DEBUG_OUTPUT4,
 					DEBUG_OUTPUT_A,  DEBUG_OUTPUT_A2, DEBUG_OUTPUT_A3, DEBUG_OUTPUT_A4,
 					SD_Rudder, 
@@ -23,20 +23,20 @@ module Part5 (CLOCK_50,
 					Throttle,
 					Pan,
 					Tilt,
-				 SD_Rudder_Output,
-				 Rx_Rudder_Output,
-				 RPI_Req_CRUISE,
-				 RPI_Ack_CRUISE,
-				 RPI_Req_AUTONOMOUS,
-				 RPI_Ack_AUTONOMOUS,
-				 OUTPUT_SHOW,
-				 SELECT, 
-				 RPI_Rx,
-				 RPI_Tx,
-				 Xbee_Rx,
-				 Xbee_Tx,
-				 GPS_Rx,
-				 GPS_Tx		 
+					 SD_Rudder_Output,
+					 Rx_Rudder_Output,
+					 RPI_Req_CRUISE,
+					 RPI_Ack_CRUISE,
+					 RPI_Req_AUTONOMOUS,
+					 RPI_Ack_AUTONOMOUS,
+					 OUTPUT_SHOW,
+					 SELECT, 
+					 RPI_Rx,
+					 RPI_Tx,
+					 Xbee_Rx,
+					 Xbee_Tx,
+					 GPS_Rx,
+					 GPS_Tx		 
 				);
 				
 	input SD_Rudder, 
@@ -84,7 +84,7 @@ module Part5 (CLOCK_50,
 	output [0:0] DEBUG_OUTPUT3;
 	output [0:0] DEBUG_OUTPUT4;
 	wire   [2:0] S;
-	output [0:0] Clock_Pulse;
+
 
 	
 	input SELECT, RPI_Tx, Xbee_Tx, GPS_Tx;
@@ -135,6 +135,7 @@ module Part5 (CLOCK_50,
 	SignalDetector signal_detector_cruise_control (CLOCK_50, CRUISE_CONTROL, 
 			DEBUG_OUTPUT, LED[1], DEBUG_OUTPUT2,DEBUG_OUTPUT3,
 				DEBUG_OUTPUT4);	
+				WORK
 	 */
 		
 	SignalDetector signal_detector_cruise_control (CLOCK_50, CRUISE_CONTROL, 

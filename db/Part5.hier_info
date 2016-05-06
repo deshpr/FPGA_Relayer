@@ -12,7 +12,6 @@ CRUISE_CONTROL[0] => CRUISE_CONTROL[0].IN1
 DEBUG_OUTPUT[0] <= SignalDetector:signal_detector_autonomous_control.port2
 AUX_OUTPUT[0] <= AUTONOMOUS[0].DB_MAX_OUTPUT_PORT_TYPE
 AUX_OUTPUT_TWO[0] <= CRUISE_CONTROL[0].DB_MAX_OUTPUT_PORT_TYPE
-Clock_Pulse[0] <= CLOCK_50[0].DB_MAX_OUTPUT_PORT_TYPE
 DEBUG_OUTPUT2[0] <= SignalDetector:signal_detector_autonomous_control.port4
 DEBUG_OUTPUT3[0] <= SignalDetector:signal_detector_autonomous_control.port5
 DEBUG_OUTPUT4[0] <= SignalDetector:signal_detector_autonomous_control.port6
