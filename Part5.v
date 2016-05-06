@@ -91,13 +91,31 @@ module Part5 (CLOCK_50,
 	output RPI_Rx, Xbee_Rx, GPS_Rx;
 	
 	assign OUTPUT_SHOW = 1;
+	reg CRUISE_CONTROL_MODE;
+	reg AUTONOMOUS_MODE;
+	
+	always @(posedge CLOCK_50)
+	begin
+		if(RPI_Req_CRUISE ~^ RPI_Ack_CRUISE)
+		begin
+			CRUISE_CONTROL_MODE = RPI_Ack_CRUISE;
+		end
+		if(RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS)
+		begin
+			AUTONOMOUS_MODE = RPI_Ack_AUTONOMOUS;
+		end
+	end
 
 	// Notify Raspberry Pi regarding whether a certain mode is ON or OFF.
 	// Set up mode of operation based on Acknowledgement from Raspberry Pi.
 	// Implement XNOR. Only if both are equal is the result true and we set
 	// the appropriate mode. 
-	wire CRUISE_CONTROL_MODE = (RPI_Req_CRUISE ~^ RPI_Ack_CRUISE) & RPI_Req_CRUISE;
-	wire AUTONOMOUS_MODE = (RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS) & RPI_Req_AUTONOMOUS;
+	// Do not use commented logic below..
+//	wire CRUISE_CONTROL_MODE = (RPI_Req_CRUISE ~^ RPI_Ack_CRUISE) & RPI_Req_CRUISE;
+//	wire AUTONOMOUS_MODE = (RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS) & RPI_Req_AUTONOMOUS;
+	
+//	wire CRUISE_CONTROL_MODE = (RPI_Req_CRUISE ~^ RPI_Ack_CRUISE) & RPI_Ack_CRUISE;
+//	wire AUTONOMOUS_MODE = (RPI_Req_AUTONOMOUS ~^ RPI_Ack_AUTONOMOUS) & RPI_Ack_AUTONOMOUS;
 	
 	assign LED[2] = RPI_Ack_AUTONOMOUS;
 	assign LED[3] = RPI_Ack_CRUISE;

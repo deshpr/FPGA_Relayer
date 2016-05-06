@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri May 06 13:37:31 2016
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Fri May 06 14:05:29 2016
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Part5
 Top-level Entity Name : Part5
 Family : Cyclone IV E
-Total logic elements : 241
-    Total combinational functions : 241
-    Dedicated logic registers : 76
-Total registers : 76
+Total logic elements : 245
+    Total combinational functions : 245
+    Dedicated logic registers : 78
+Total registers : 78
 Total pins : 50
 Total virtual pins : 0
 Total memory bits : 0

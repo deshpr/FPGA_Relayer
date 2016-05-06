@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Part5
-Fri May 06 13:37:31 2016
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri May 06 14:05:29 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -44,15 +44,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 06 13:37:31 2016           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri May 06 14:05:29 2016           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Part5                                           ;
 ; Top-level Entity Name              ; Part5                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 241                                             ;
-;     Total combinational functions  ; 241                                             ;
-;     Dedicated logic registers      ; 76                                              ;
-; Total registers                    ; 76                                              ;
+; Total logic elements               ; 245                                             ;
+;     Total combinational functions  ; 245                                             ;
+;     Dedicated logic registers      ; 78                                              ;
+; Total registers                    ; 78                                              ;
 ; Total pins                         ; 50                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -175,27 +175,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 241               ;
+; Estimated Total logic elements              ; 245               ;
 ;                                             ;                   ;
-; Total combinational functions               ; 241               ;
+; Total combinational functions               ; 245               ;
 ; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 163               ;
-;     -- 3 input functions                    ; 70                ;
-;     -- <=2 input functions                  ; 8                 ;
+;     -- 4 input functions                    ; 165               ;
+;     -- 3 input functions                    ; 71                ;
+;     -- <=2 input functions                  ; 9                 ;
 ;                                             ;                   ;
 ; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 191               ;
+;     -- normal mode                          ; 195               ;
 ;     -- arithmetic mode                      ; 50                ;
 ;                                             ;                   ;
-; Total registers                             ; 76                ;
-;     -- Dedicated logic registers            ; 76                ;
+; Total registers                             ; 78                ;
+;     -- Dedicated logic registers            ; 78                ;
 ;     -- I/O registers                        ; 0                 ;
 ;                                             ;                   ;
 ; I/O pins                                    ; 50                ;
 ; Embedded Multiplier 9-bit elements          ; 0                 ;
 ; Maximum fan-out node                        ; CLOCK_50[0]~input ;
-; Maximum fan-out                             ; 76                ;
-; Total fan-out                               ; 1110              ;
+; Maximum fan-out                             ; 78                ;
+; Total fan-out                               ; 1127              ;
 ; Average fan-out                             ; 2.66              ;
 +---------------------------------------------+-------------------+
 
@@ -205,9 +205,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
-; |Part5                                                 ; 241 (7)           ; 76 (0)       ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |Part5                                                   ; work         ;
+; |Part5                                                 ; 245 (8)           ; 78 (2)       ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |Part5                                                   ; work         ;
 ;    |SignalDetector:signal_detector_autonomous_control| ; 117 (117)         ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_autonomous_control ; work         ;
-;    |SignalDetector:signal_detector_cruise_control|     ; 117 (117)         ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_cruise_control     ; work         ;
+;    |SignalDetector:signal_detector_cruise_control|     ; 120 (120)         ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|SignalDetector:signal_detector_cruise_control     ; work         ;
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -217,7 +217,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 76    ;
+; Total registers                              ; 78    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -273,7 +273,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -281,9 +281,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 06 13:37:10 2016
+    Info: Processing started: Fri May 06 14:05:22 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part5 -c Part5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /330 projects/lab1/part6/myfrequencydivider/myfrequencydivider.v
@@ -340,9 +340,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file output_
     Info (12023): Found entity 1: SignalDetector
 Info (12021): Found 1 design units, including 1 entities, in source file uart_switch.v
     Info (12023): Found entity 1: UART_Switch
-Warning (10236): Verilog HDL Implicit Net warning at Part5.v(106): created implicit net for "Clock_Pulse"
+Warning (10236): Verilog HDL Implicit Net warning at Part5.v(123): created implicit net for "Clock_Pulse"
 Info (12127): Elaborating entity "Part5" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Part5.v(106): object "Clock_Pulse" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Part5.v(123): object "Clock_Pulse" assigned a value but never read
 Warning (10034): Output port "LED[6]" at Part5.v(82) has no driver
 Info (12128): Elaborating entity "SignalDetector" for hierarchy "SignalDetector:signal_detector_autonomous_control"
 Warning (10036): Verilog HDL or VHDL warning at SignalDetector.v(8): object "Enabler" assigned a value but never read
@@ -385,14 +385,14 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "RPI_Tx"
     Warning (15610): No output dependent on input pin "Xbee_Tx"
     Warning (15610): No output dependent on input pin "GPS_Tx"
-Info (21057): Implemented 291 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 295 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 241 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 380 megabytes
-    Info: Processing ended: Fri May 06 13:37:31 2016
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 245 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 471 megabytes
+    Info: Processing ended: Fri May 06 14:05:29 2016
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
